@@ -69,7 +69,7 @@ export default function App() {
   const now = useMemo(() => new Date().toUTCString().replace("GMT", "UTC"), []);
 
   return (
-    <div className={cls("h-full w-full", dark ? "bg-black" : "bg-slate-50")}>
+    <div className={cls("min-h-screen w-full", dark ? "bg-black" : "bg-slate-50")}>
       {/* 3D Background */}
       <div className="absolute inset-0">
         <Canvas
@@ -86,7 +86,7 @@ export default function App() {
       </div>
 
       {/* UI Overlay */}
-      <div className="relative z-10 h-full">
+      <div className="relative z-10 min-h-screen dashboard-content">
         <header className="px-4 md:px-8 pt-4 md:pt-6">
           <div
             className={cls(
